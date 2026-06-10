@@ -1,6 +1,6 @@
 {
   "name": "cat 'n mouse",
-  "version": "1.1",
+  "version": "1.2",
   "manifest_version": 3,
   "description": "changes your cursor to a cat",
   "action": {
@@ -26,8 +26,38 @@
       "js": ["content.js"]
     }
   ],
-  "permissions": [
-    "activeTab",
-    "storage"
-  ]
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/cat-1.png",
+        "images/cat-2.png",
+        "images/cat-3.png",
+        "images/cat-4.png",
+        "images/cat-5.png",
+        "images/cat-6.png",
+        "images/cat-7.png",
+        "images/cat-8.png",
+        "images/cat-9.png",
+        "images/cat-10.png",
+        "images/cat-11.png",
+        "images/cat-12.png",
+        "images/cat-13.png",
+        "images/cat-14.png",
+        "images/cat-15.png",
+        "images/cat-16.png",
+        "images/cat-17.png",
+        "images/cat-18.png",
+        "images/cat-19.png",
+        "images/cat-20.png",
+        "images/cat-21.png",
+        "images/cat-22.png",
+        "images/cat-23.png",
+        "images/cat-24.png",
+        "images/cat-25.png",
+        "images/cat-26.png"
+      ],
+      "matches": ["https://*/*"]
+    }
+  ],
+  "permissions": ["storage"]
 }

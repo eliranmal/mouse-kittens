@@ -1,25 +1,32 @@
 {
-    const catSelectEl = document.getElementById('cat-name');
-    const cursorSizeEl = document.getElementById('cursor-size');
+    const settingsFormEl = document.getElementById('popup-form');
+
+
+    // bind event listeners
 
     const urlParamsChangeHandler = (ev) => {
         if (ev.target) {
             chrome.storage.local.set({
-                [ev.target.id]: ev.target.value,
+                [ev.target.name]: ev.target.value,
             });
         }
     }
 
-    // bind event listeners
-    catSelectEl.addEventListener('change', urlParamsChangeHandler)
-    cursorSizeEl.addEventListener('change', urlParamsChangeHandler)
+    // a nice trick to register one listener for all radio buttons
+    settingsFormEl.addEventListener('change', (ev) => {
+        if (ev.target?.matches('input[type="radio"]')) {
+            urlParamsChangeHandler(ev);
+        }
+    })
+
 
     // populate initial values from storage
+
     chrome.storage.local.get({
-        'cat-name': 'bella',
-        'cursor-size': '120',
+        'cat-name': 'cat-1',
     }).then((data) => {
-        catSelectEl.value = data['cat-name'];
-        cursorSizeEl.value = data['cursor-size'];
+        settingsFormEl.querySelector(
+            `input[name="cat-name"][value="${data['cat-name']}"]`
+        ).checked = true;
     });
 }

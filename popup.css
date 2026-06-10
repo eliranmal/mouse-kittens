@@ -4,9 +4,9 @@ html {
 }
 
 body {
-    width: 300px;
+    width: 330px;
     margin: 0;
-    padding: 1rem 2rem;
+    padding: 2rem;
     text-align: center;
 }
 
@@ -15,25 +15,177 @@ form {
     padding: 0;
 }
 
-form > * {
-    box-sizing: border-box;
-    display: block;
-    margin: .5rem 0;
-    padding: 0;
-    float: left;
-    width: 67%;
+form input[type="radio"] {
+    appearance: none;
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: .25rem;
+    background-size: contain;
+    clip-path: circle(50%);
+    cursor: pointer;
+    opacity: .5;
 }
 
-form > label {
-    clear: left;
-    width: 33%;
-    padding-right: 1rem;
-    text-align: right;
+form input[type="radio"]:hover,
+form input[type="radio"]:focus,
+form input[type="radio"]:checked {
+    opacity: 1;
 }
 
-/* clearfix */
-form::after {
-    content: "";
-    display: table;
-    clear: both;
+
+input[type="radio"][value="cat-1"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-1.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-1.png');
+}
+
+input[type="radio"][value="cat-2"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-2.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-2.png');
+}
+
+input[type="radio"][value="cat-3"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-3.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-3.png');
+}
+
+input[type="radio"][value="cat-4"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-4.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-4.png');
+}
+
+input[type="radio"][value="cat-5"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-5.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-5.png');
+}
+
+input[type="radio"][value="cat-6"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-6.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-6.png');
+}
+
+input[type="radio"][value="cat-7"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-7.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-7.png');
+}
+
+input[type="radio"][value="cat-8"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-8.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-8.png');
+}
+
+input[type="radio"][value="cat-9"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-9.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-9.png');
+}
+
+input[type="radio"][value="cat-10"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-10.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-10.png');
+}
+
+input[type="radio"][value="cat-11"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-11.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-11.png');
+}
+
+input[type="radio"][value="cat-12"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-12.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-12.png');
+}
+
+input[type="radio"][value="cat-13"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-13.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-13.png');
+}
+
+input[type="radio"][value="cat-14"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-14.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-14.png');
+}
+
+input[type="radio"][value="cat-15"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-15.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-15.png');
+}
+
+input[type="radio"][value="cat-16"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-16.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-16.png');
+}
+
+input[type="radio"][value="cat-17"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-17.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-17.png');
+}
+
+input[type="radio"][value="cat-18"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-18.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-18.png');
+}
+
+input[type="radio"][value="cat-19"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-19.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-19.png');
+}
+
+input[type="radio"][value="cat-20"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-20.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-20.png');
+}
+
+input[type="radio"][value="cat-21"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-21.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-21.png');
+}
+
+input[type="radio"][value="cat-22"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-22.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-22.png');
+}
+
+input[type="radio"][value="cat-23"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-23.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-23.png');
+}
+
+input[type="radio"][value="cat-24"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-24.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-24.png');
+}
+
+input[type="radio"][value="cat-25"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-25.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-25.png');
+}
+
+input[type="radio"][value="cat-26"] {
+    background-image:
+            url('chrome-extension://__MSG_@@extension_id__/images/cat-26.png'),
+            url('moz-extension://__MSG_@@extension_id__/images/cat-26.png');
 }

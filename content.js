@@ -1,9 +1,16 @@
 
-const setCatUrl = (name = 'bella', size = '120') => {
-  // `fit` must be `inside`, otherwise the cursor won't render at all
-  // (because the image dimensions might exceed the cursor size the browser allows)
-  const catUrl = `https://placecats.com/${name}/${size}/${size}/?fit=inside&position=top`;
-  document.documentElement.style.setProperty('--cat-url', `url("${catUrl}")`);
+const setCatUrl = (name = 'cat-1') => {
+
+  // same as referencing `__MSG_@@extension_id__` in CSS files
+  const extensionId = chrome.i18n.getMessage('@@extension_id');
+
+  // use fallback URLs, for chromium / gecko based browsers
+  const cursorUrls =
+      ['chrome-extension', 'moz-extension']
+          .map(protocol => `url('${protocol}://${extensionId}/images/${name}.png')`)
+          .join(', ');
+
+  document.documentElement.style.setProperty('--cursor-urls', cursorUrls);
 }
 
 const toggleCursor = () => {
@@ -19,15 +26,13 @@ chrome.runtime.onMessage.addListener((msg) => {
 chrome.storage.local.onChanged.addListener(async (changes) => {
   const currentData = await chrome.storage.local.get();
   const catNameChange = changes['cat-name'];
-  const cursorSizeChange = changes['cursor-size'];
   setCatUrl(
       catNameChange ? catNameChange.newValue : currentData['cat-name'],
-      cursorSizeChange ? cursorSizeChange.newValue : currentData['cursor-size'],
   );
 });
 
 // populate initial values from storage
 chrome.storage.local.get().then((data) => (
-    setCatUrl(data['cat-name'], data['cursor-size'])
+    setCatUrl(data['cat-name'])
 ));
 

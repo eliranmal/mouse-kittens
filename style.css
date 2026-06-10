@@ -1,10 +1,12 @@
 
 :root {
-  --cat-url: '';
+  --cursor-urls:
+          url('chrome-extension://__MSG_@@extension_id__/images/cat-1.png'),
+          url('moz-extension://__MSG_@@extension_id__/images/cat-1.png');
 }
 
 .cat-cursor,
 .cat-cursor * {
-  cursor: var(--cat-url), auto !important;
+  cursor: var(--cursor-urls), auto !important;
 }
 
