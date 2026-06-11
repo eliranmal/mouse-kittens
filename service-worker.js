@@ -5,6 +5,9 @@ const increment = (num, ceil) => {
   return n % ceil + 1;
 };
 
+// cat names are the names of the cat image files,
+// they're in the form `cat-1`, `cat-2`, etc.
+// this function increments their number suffix.
 const rotateCatName = (name) => (
     name.replace(/-(\d+)$/, (_, strIndex) => (
         `-${increment(strIndex, 25)}`)
@@ -25,6 +28,7 @@ const rotateCursor = async () => {
 chrome.commands.onCommand.addListener(async (command) => {
   if (command === 'switch-cursor') {
     await rotateCursor();
+    chrome.runtime.sendMessage({ command });
   }
 
   if (['toggle-cursor', 'switch-cursor'].includes(command)) {
