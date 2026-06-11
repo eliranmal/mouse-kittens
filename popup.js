@@ -6,7 +6,7 @@
 
     const urlParamsChangeHandler = (ev) => {
         if (ev.target) {
-            chrome.storage.local.set({
+            chrome.storage.sync.set({
                 [ev.target.name]: ev.target.value,
             });
         }
@@ -22,7 +22,7 @@
 
     // populate initial values from storage
 
-    chrome.storage.local.get({
+    chrome.storage.sync.get({
         'cat-name': 'cat-1',
     }).then((data) => {
         settingsFormEl.querySelector(

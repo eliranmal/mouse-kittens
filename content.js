@@ -28,8 +28,8 @@
     }
   });
 
-  chrome.storage.local.onChanged.addListener(async (changes) => {
-    const currentData = await chrome.storage.local.get();
+  chrome.storage.sync.onChanged.addListener(async (changes) => {
+    const currentData = await chrome.storage.sync.get();
     const catNameChange = changes['cat-name'];
     setCatUrl(
         catNameChange ? catNameChange.newValue : currentData['cat-name'],
@@ -39,7 +39,7 @@
 
   // populate initial values from storage
 
-  chrome.storage.local.get({
+  chrome.storage.sync.get({
     'cat-name': 'cat-1',
   }).then((data) => (
     setCatUrl(data['cat-name'])
